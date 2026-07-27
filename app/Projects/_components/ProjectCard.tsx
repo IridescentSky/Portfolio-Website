@@ -12,7 +12,7 @@ import Image from "next/image"
 
 export default function ProjectCard() {
     return (
-        <div className="w-md lg:w-xl">
+        <div className="w-md lg:w-md">
             <Card className="pt-0">
                 <div className="relative background-blue-300 w-full h-50">
                     <Image 

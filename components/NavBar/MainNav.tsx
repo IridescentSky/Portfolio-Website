@@ -1,9 +1,10 @@
 "use client"
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function MainNav() {
     return (
-        <div className="py-3 px-5 flex justify-between">
+        <div className="py-3 px-5 flex justify-between bg-white">
             {/* Name */}
             <div className="flex items-center">
                 <h1 className="">Frank Huang</h1>
@@ -11,10 +12,10 @@ export default function MainNav() {
 
             {/* Nav Links */}
             <div className="">
-                <Button variant="ghost">Home</Button>
-                <Button variant="ghost">About</Button>
-                <Button variant="ghost">Projects</Button>
-                <Button variant="ghost">Blog</Button>
+                <Button variant="ghost"><Link href="/">Home</Link></Button>
+                <Button variant="ghost"><Link href="/">About</Link></Button>
+                <Button variant="ghost"><Link href="/Projects">Projects</Link></Button>
+                <Button variant="ghost"><Link href="/Blog">Blog</Link></Button>
             </div>
         </div>
     )

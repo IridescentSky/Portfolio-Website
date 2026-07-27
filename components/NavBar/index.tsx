@@ -5,10 +5,10 @@ import MobileNav from "./MobileNav"
 export default function NavBar() {
     return (
         <>
-            <div className="max-md:hidden display-block">
+            <div className="sticky top-0 z-10 max-md:hidden display-block">
                 <MainNav/>
             </div>
-            <div className="display-block md:hidden">
+            <div className="sticky top-0 z-10 display-block md:hidden">
                 <MobileNav/>
             </div>
         </>
