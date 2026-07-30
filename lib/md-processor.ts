@@ -8,6 +8,7 @@ import remarkGfm from "remark-gfm";
 import remarkRehype from "remark-rehype";
 import rehypeSlug from "rehype-slug";
 import rehypeHighlight from "rehype-highlight";
+import rehypeSanitize from "rehype-sanitize";
 import rehypeStringify from "rehype-stringify";
 
 export default async function markdownToHtml(markdown: string) {
@@ -16,6 +17,7 @@ export default async function markdownToHtml(markdown: string) {
     .use(remarkRehype)
     .use(rehypeSlug)
     .use(rehypeHighlight)
+    .use(rehypeSanitize)
     .use(rehypeStringify)
     .process(markdown);
   return result.toString();

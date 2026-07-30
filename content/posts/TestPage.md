@@ -1,6 +1,6 @@
 ---
 title: 'Test Page'
-slug: /test-page
+slug: test-page
 description: Test Image of Prairie Dog from Joe Ravi, CC-BY-SA 3.0
 date: 2026/07/12
 tags: ['Project', 'CTF Writeup']
@@ -9,8 +9,7 @@ coverImage:
     alt: "Image of Prairie Dog"
 ---
 
-# Test Page
-Test Image of Prairie Dog from Joe Ravi, CC-BY-SA 3.0
+## Test Image of Prairie Dog from Joe Ravi, CC-BY-SA 3.0
 
 ```
 for i in range(10):

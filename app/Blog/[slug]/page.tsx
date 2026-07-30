@@ -3,7 +3,7 @@
 
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { getAllPosts, getPostByFileName } from "@/lib/blog-api";
+import { getAllPosts, getPostBySlug } from "@/lib/blog-api";
 import markdownToHtml from "@/lib/md-processor";
 import Image from "next/image";
 import "./page.css";
@@ -17,7 +17,52 @@ export async function generateStaticParams() {
     return posts.map((post) => ({ slug: post.slug }));
 }
 
-// export async function generateMetadata(props: Params): Promise<Metadata> {
-//     const params = await props.params;
-//     const post = 
-// }
+export async function generateMetadata(props: Params): Promise<Metadata> {
+    const params = await props.params;
+    const post = await getPostBySlug(params.slug);
+
+    if (post === undefined) return {};
+
+    return {
+        title: post.title,
+        description: post.description,
+        openGraph: {
+            title: post.title,
+            description: post.description,
+            type: "article",
+            publishedTime: new Date(post.date).toISOString(),
+            images: [{ url: post.coverImage.src}],
+        }
+    }
+}
+
+export default async function Post(props: Params) {
+    const params = await props.params;
+    const post = await getPostBySlug(params.slug);
+    console.log("POST")
+    console.log(post);
+
+    if (post === undefined) {
+        notFound();
+    }
+    
+    const content = await markdownToHtml(post.content);
+
+    return (
+        // TODO: Figure out a width that you like
+        <article className="max-w-3xl mx-auto px-4 py-16">
+            <header className="mb-12">
+                <h1 className="text-4xl md:text-5xl font-bold mb-4">{post.title}</h1>
+
+                {/* Cover Image */}
+                <div className="relative aspect-video rounded-lg overflow-hidden">
+                    <Image src={post.coverImage.src} alt={post.coverImage.alt} fill priority className="object-cover" />
+                </div>
+
+                {/* TODO: Add image credit */}
+            </header>
+
+            <div className="markdown" dangerouslySetInnerHTML={{__html: content}} />
+        </article>
+    )
+}

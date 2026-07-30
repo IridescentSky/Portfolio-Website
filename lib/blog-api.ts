@@ -32,12 +32,15 @@ export async function getAllPosts(): Promise<Post[]> {
     return posts;
 }
 
-export async function getPostBySlug(slug: string): Promise<Post | null> {
+export async function getPostBySlug(slug: string): Promise<Post | undefined> {
     const posts = await getAllPosts();
+
+    let target_post = undefined;
+
     posts.forEach((post) => {
         if (post.slug == slug) {
-            return post;
+            target_post = post
         }
     });
-    return null;
+    return target_post;
 }
