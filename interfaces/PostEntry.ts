@@ -15,7 +15,7 @@ export default interface PostEntry {
     }
     coverImageCredit?: {
         photographerName: string;
-        photographerURL: string;
+        photographerURL?: string;
         sourceURL: string;
         license?: string;
     }

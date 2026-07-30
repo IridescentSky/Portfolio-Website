@@ -15,7 +15,7 @@ export interface Post {
     }
     coverImageCredit?: {
         photographerName: string;
-        photographerURL: string;
+        photographerURL?: string;
         sourceURL: string;
         license?: string;
     }

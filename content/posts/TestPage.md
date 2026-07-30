@@ -7,6 +7,11 @@ tags: ['Project', 'CTF Writeup']
 coverImage:
     src: "/Black-Tailed_Prairie_Dog.jpg"
     alt: "Image of Prairie Dog"
+coverImageCredit:
+    photographerName: Joe Ravi
+    photographerURL: "https://commons.wikimedia.org/wiki/User:Jovianeye"
+    sourceURL: "https://commons.wikimedia.org/wiki/File:Black-Tailed_Prairie_Dog.jpg"
+    license: CC-BY-SA 3.0
 ---
 
 ## Test Image of Prairie Dog from Joe Ravi, CC-BY-SA 3.0

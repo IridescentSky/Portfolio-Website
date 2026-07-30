@@ -8,7 +8,7 @@ export default function BlogEntry({ slug, title, tags, description, date, coverI
     // TODO: Implement cover image credit
     return (
         <article>
-            <Link href={`blog/${slug}`}>
+            <Link href={`Blog/${slug}`}>
                 <div className="w-4xl flex gap-5">
                     {/* Blog Thumbnail */}
                     {/* TODO: Add sizes for optimization */}
