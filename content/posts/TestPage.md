@@ -16,7 +16,7 @@ coverImageCredit:
 
 ## Test Image of Prairie Dog from Joe Ravi, CC-BY-SA 3.0
 
-```
+```py
 for i in range(10):
     print("Hello World")
 ```

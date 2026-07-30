@@ -8,7 +8,7 @@ import remarkGfm from "remark-gfm";
 import remarkRehype from "remark-rehype";
 import rehypeSlug from "rehype-slug";
 import rehypeHighlight from "rehype-highlight";
-import rehypeSanitize from "rehype-sanitize";
+import rehypeSanitize, { defaultSchema } from "rehype-sanitize"
 import rehypeStringify from "rehype-stringify";
 
 export default async function markdownToHtml(markdown: string) {
@@ -16,8 +16,18 @@ export default async function markdownToHtml(markdown: string) {
     .use(remarkGfm)
     .use(remarkRehype)
     .use(rehypeSlug)
+    .use(rehypeSanitize, {
+      ...defaultSchema,
+      attributes: {
+        ...defaultSchema.attributes,
+        code: [
+          ...(defaultSchema.attributes?.code || []),
+          // List of all allowed languages:
+          ['className', 'language-js', 'language-css', 'language-md']
+        ]
+      }
+    })
     .use(rehypeHighlight)
-    .use(rehypeSanitize)
     .use(rehypeStringify)
     .process(markdown);
   return result.toString();

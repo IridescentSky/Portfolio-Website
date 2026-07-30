@@ -54,6 +54,14 @@ export default async function Post(props: Params) {
             <header className="mb-12">
                 <h1 className="text-4xl md:text-5xl font-bold mb-4">{post.title}</h1>
 
+                <div className="flex items-center gap-4 text-gray-600 mb-8">
+                    <div>
+                        <time>
+                            {new Date(post.date).toDateString()}
+                        </time>
+                    </div>
+                </div>
+
                 {/* Cover Image */}
                 <div className="relative aspect-video rounded-lg overflow-hidden">
                     <Image src={post.coverImage.src} alt={post.coverImage.alt} fill priority className="object-cover" />
