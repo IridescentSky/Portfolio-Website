@@ -1,0 +1,17 @@
+{
+    "projects": [
+        {
+            "title": "VPCI FIRST Tech Challenge Robotics",
+            "description": "Programming Co-Lead for high school FTC Robotics Team",
+            "tags": ["Robotics", "Java"],
+            "coverImage": {
+                "src": "/images/projects/vpci-robotics/thumbnail.jpg",
+                "alt": "Image of VPCI FIRST Tech Challenge Robots"
+            },
+            "links": {
+                "github": "https://github.com/vicparkrobotics/Panthertronics-24485-2023"
+            }
+        }
+        
+    ]
+}

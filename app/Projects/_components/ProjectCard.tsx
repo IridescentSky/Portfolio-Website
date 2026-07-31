@@ -1,3 +1,5 @@
+import ProjectEntry from "@/interfaces/ProjectEntry";
+
 import {
   Card,
   CardAction,
@@ -6,33 +8,43 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import Image from "next/image"
+} from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import Link from "next/link";
+import { FaGithub } from "react-icons/fa";
+import Image from "next/image";
 
-export default function ProjectCard() {
+export default function ProjectCard({ title, description, tags, coverImage, links }: ProjectEntry) {
     return (
         <div className="w-md lg:w-md">
             <Card className="pt-0">
                 <div className="relative background-blue-300 w-full h-50">
                     <Image 
-                        src="/Black-Tailed_Prairie_Dog.jpg"
+                        src={coverImage.src}
                         fill={true}
-                        alt="Prairie Dog"
+                        alt={coverImage.alt}
                         className="object-cover"
                     />
                 </div>
-                <CardHeader>Project Title</CardHeader>
+                <CardHeader>{title}</CardHeader>
                 <CardDescription>
                     <div className="px-5">
-                        Test Image of Prairie Dog from Joe Ravi, CC-BY-SA 3.0
+                        {description}
                     </div>
                 </CardDescription>
-                <CardFooter>
+                <CardFooter className="flex justify-between">
                     <div className="flex gap-3">
-                        <Badge>Python</Badge>
-                        <Badge>CV</Badge>
+                        {tags.map((tag) => (
+                            <Badge key={tag}>{tag}</Badge>
+                        ))}
                     </div>
+
+                    {links && <div className="flex gap-3">
+                        {links.github && <a href={links.github}>
+                            <FaGithub className="w-5 h-5"/>
+                        </a>}
+                        {links.blog && <Link href={links.blog}>Blog</Link>}    
+                    </div>}
                 </CardFooter>
             </Card>
         </div>
