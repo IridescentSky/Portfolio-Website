@@ -8,6 +8,7 @@ export default interface ProjectEntry {
     }
     links?: {
         github?: string;
+        demo?: string;
         blog?: string;
     }
 }

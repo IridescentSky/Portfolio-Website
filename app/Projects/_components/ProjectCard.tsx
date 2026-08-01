@@ -43,6 +43,7 @@ export default function ProjectCard({ title, description, tags, coverImage, link
                         {links.github && <a href={links.github}>
                             <FaGithub className="w-5 h-5"/>
                         </a>}
+                        {links.demo && <a href={links.demo}>Demo</a>}
                         {links.blog && <Link href={links.blog}>Blog</Link>}    
                     </div>}
                 </CardFooter>

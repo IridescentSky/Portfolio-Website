@@ -1,6 +1,11 @@
 import ProjectCard from "./_components/ProjectCard";
 import ProjectJSON from "@/content/projects/projects.json";
 
+export const metadata = {
+  title: "Projects",
+  description: "My project gallery."
+}
+
 export default function ProjectHome() {
   const projects = ProjectJSON.projects;
   return (
