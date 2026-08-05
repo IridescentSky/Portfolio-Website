@@ -13,16 +13,23 @@ export default function Home() {
     <div className="flex flex-col gap-5 flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
       <header>
         <h1 className="text-5xl lg:text-7xl mb-12">
-            Hi! I'm Frank Huang
+            Frank Huang
         </h1>
       </header>
 
       {/* About */}
-      <section>
-        <h2 className="text-2xl">About</h2>
-        <div>
-          I'm a student at the University of Toronto, studying computer science. I like dabbling in various CS and STEM-related things,
-          and you can see what I'm working on in my project gallery and blogs :D. Currently, I'm learning about ____
+      <section className="p-10">
+        <div className="flex gap-10">
+          <div className="w-md">
+            <h2 className="text-2xl">About</h2>
+            <div>
+              I'm a student at the University of Toronto, studying computer science. I like dabbling in various CS and STEM-related things,
+              and you can see what I'm working on in my project gallery and blogs :D
+            </div>
+          </div>
+          <div className="relative w-lg aspect-video rounded-lg overflow-hidden">
+            <Image fill={true} src="/squirrel.jpg" alt="Squirrel in Snow" className="object-cover"/>
+          </div>
         </div>
       </section>
 
