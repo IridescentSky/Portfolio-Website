@@ -1,4 +1,4 @@
-import ProjectCard from "./_components/ProjectCard";
+import ProjectEntry from "./_components/ProjectEntry";
 import ProjectJSON from "@/content/projects/projects.json";
 
 export const metadata = {
@@ -12,7 +12,7 @@ export default function ProjectHome() {
     <div className="px-5 py-5">
       <div className="flex flex-wrap justify-center gap-5">
           {projects.map((project) => (
-            <ProjectCard
+            <ProjectEntry
               key={project.title}
               {...project}
             />

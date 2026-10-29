@@ -1,4 +1,6 @@
-import ProjectEntry from "@/interfaces/ProjectEntry";
+// Unused 
+
+import ProjectInterface from "@/interfaces/ProjectInterface";
 
 import {
   Card,
@@ -14,7 +16,7 @@ import Link from "next/link";
 import { FaGithub } from "react-icons/fa";
 import Image from "next/image";
 
-export default function ProjectCard({ title, description, tags, coverImage, links }: ProjectEntry) {
+export default function ProjectCard({ title, description, tags, coverImage, links }: ProjectInterface) {
     return (
         <div className="w-md lg:w-md">
             <Card className="pt-0">
