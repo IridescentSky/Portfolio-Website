@@ -11,15 +11,15 @@ import {
     CardHeader,
     CardTitle,
 } from "@/components/ui/card";
+import { ProjectModal } from "./ProjectModal";
+
 import { Badge } from "@/components/ui/badge";
-import Link from "next/link";
-import { FaGithub } from "react-icons/fa";
 import Image from "next/image";
 
 export default function ProjectEntry({ title, description, tags, coverImage, links }: ProjectInterface) {
     return (
         <div>
-            <div className="w-4xl flex gap-5">
+            <div className="lg:w-4xl flex flex-col md:flex-row gap-5">
                 {/* Project Thumbnail */}
                 {/* TODO: Add sizes for optimization */}
                 <div className="relative min-w-24 max-w-2xs w-full h-36 md:h-50">
@@ -32,7 +32,7 @@ export default function ProjectEntry({ title, description, tags, coverImage, lin
                 </div>
 
                 {/* Entry Contents */}
-                <div className="w-full">
+                <div className="max-w-2xs md:max-w-full w-full">
                     {/* Title */}
                     <h1 className="font-semibold md:text-lg">
                         {title}
@@ -51,18 +51,7 @@ export default function ProjectEntry({ title, description, tags, coverImage, lin
                     <div className="max-h-36 mt-2 w-full">
                         <p className="max-sm:hidden text-ellipsis">{description}</p>
                     </div>
-
-                    {/* Details */}
-                    <div>
-                        {links && <div className="flex gap-3">
-                            {links.github && <a href={links.github}>
-                                <FaGithub className="w-5 h-5" />
-                            </a>}
-                            {links.demo && <a href={links.demo}>Demo</a>}
-                            {links.blog && <Link href={links.blog}>Blog</Link>}
-                        </div>}
-                    </div>
-
+                    <ProjectModal links={links}/>
                 </div>
             </div>
         </div>
