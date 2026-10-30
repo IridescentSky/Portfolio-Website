@@ -1,3 +1,5 @@
+import ProjectModalInterface from "./ProjectModalInterface";
+
 export default interface ProjectInterface {
     title: string;
     description: string;
@@ -6,9 +8,5 @@ export default interface ProjectInterface {
         src: string;
         alt: string;
     }
-    links?: {
-        github?: string;
-        demo?: string;
-        blog?: string;
-    }
+    modalData: ProjectModalInterface;
 }

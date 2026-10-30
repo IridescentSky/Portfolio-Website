@@ -8,10 +8,18 @@
                 "src": "/images/projects/vpci-robotics/thumbnail.jpg",
                 "alt": "Image of VPCI FIRST Tech Challenge Robots"
             },
-            "links": {
-                "github": "https://github.com/vicparkrobotics/Panthertronics-24485-2023"
+            "modalData": {
+                "description": "In high school, I was my team's Programming Co-Lead for our FTC Robotics team. We had our rookie year in Gr. 11, and it was a fun experience learning to program both tele-op and autonomous modes when we didn't have much relevant prior experience. I was most proud that we got a 50-point auton working.",
+                "features": [
+                    "Uses model trained on pre-built FTC tooling to detect location of game-piece",
+                    "Coordinates of detected game-piece used to decide where to place pixels",
+                    "Path-planning and PIDS using the RoadRunner Odometry to path towards locations for placing pixels"
+                ],
+                "links": {
+                    "github": "https://github.com/vicparkrobotics/Panthertronics-24485-2023",
+                    "demo" : "https://www.youtube.com/watch?v=NvYGFE-sSSA"
+                }
             }
         }
-        
     ]
 }

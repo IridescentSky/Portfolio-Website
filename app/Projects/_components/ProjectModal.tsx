@@ -12,23 +12,22 @@ import {
 import Link from "next/link";
 import { FaGithub } from "react-icons/fa";
 
-// Temporary testing code
-type ProjectModalProps = {
-  links?: {
-      github?: string;
-      demo?: string;
-      blog?: string;
-  }
-} 
+import ProjectModalInterface from "@/interfaces/ProjectModalInterface";
 
-export function ProjectModal({links} : ProjectModalProps) {
+// Interface so that I can pull the title from the Project Entry
+interface ProjectModalProps{
+  title: string;
+  modalData: ProjectModalInterface;
+}
+
+export function ProjectModal({title, modalData} : ProjectModalProps) {
   return (
     <Dialog>
       <form>
         <DialogTrigger render={<Button variant="outline">Open Dialog</Button>} />
         <DialogContent className="max-w-md sm:max-w-lg md:max-w-2xl">
           <DialogHeader>
-            <DialogTitle>VPCI FIRST Tech Challenge Robotics</DialogTitle>
+            <DialogTitle>{title}</DialogTitle>
             {/* <DialogDescription>
             </DialogDescription> */}
           </DialogHeader>
@@ -39,20 +38,17 @@ export function ProjectModal({links} : ProjectModalProps) {
             <div className="text-md">
               <h2 className="text-lg font-bold">Description</h2>
               <p>
-                In high school, I was my team's Programming Co-Lead for our FTC Robotics team.
-                We had our rookie year in Gr. 11, and it was a fun experience learning to program both
-                tele-op and autonomous modes when we didn't have much relevant prior experience. I was
-                most proud that we got a 50-point auton working.
+                {modalData.description}
               </p>
             </div>
 
-            {/* Summary */}
+            {/* Features */}
             <div>
-              <h2 className="text-lg font-bold">Summary</h2>
+              <h2 className="text-lg font-bold">Features</h2>
               <ul className="list-disc pl-5 space-y-1">
-                <li>Uses model trained on pre-built FTC tooling to detect location of game-piece</li>
-                <li>Coordinates of detected game-piece used to decide where to place pixels</li>
-                <li>Path-planning and PIDS using the RoadRunner Odometry to path towards locations for placing pixels</li>
+                {modalData.features.map((feature, index) => (
+                  <li key={index}>{feature}</li>
+                ))}
               </ul>
             </div>
           </div>
@@ -60,12 +56,12 @@ export function ProjectModal({links} : ProjectModalProps) {
           <DialogFooter>
             {/* Details */}
               <div>
-                  {links && <div className="flex gap-3">
-                      {links.github && <a href={links.github}>
+                  {modalData.links && <div className="flex gap-3 items-center">
+                      {modalData.links.github && <a href={modalData.links.github}>
                           <FaGithub className="w-5 h-5" />
                       </a>}
-                      {links.demo && <a href={links.demo}>Demo</a>}
-                      {links.blog && <Link href={links.blog}>Blog</Link>}
+                      {modalData.links.demo && <Button variant="link"><a href={modalData.links.demo}>Demo</a></Button>}
+                      {modalData.links.blog && <Button variant="link"><Link href={modalData.links.blog}>Blog</Link></Button>}
                   </div>}
               </div>
           </DialogFooter>
