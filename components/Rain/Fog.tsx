@@ -6,7 +6,7 @@ const baseColors: [number, number, number][] = [
     // [83, 118, 146],
     [179, 205, 228],
     [238, 243, 249],
-    [181, 238, 223],
+    // [181, 238, 223],
     [175, 180, 173]
 ]
 
@@ -23,29 +23,31 @@ function randRange(min: number, max: number): number {
   return Math.random() * (max - min) + min;
 }
 
+// ===================================MAIN DRAWING FUNCTIONS=============================================
 export function drawFog(ctx: CanvasRenderingContext2D, canvasWidth: number, canvasHeight: number): void {
-    for (let i = 0; i < 60; i++) {
+    drawBaseFill(ctx, canvasWidth, canvasHeight);
+
+    // Randomly placing blobs
+    for (let i = 0; i < 90; i++) {
         const randX = randRange(0, canvasWidth);
         const randY = randRange(0, canvasHeight);
         drawBlob(ctx, randX, randY)
     }
 }
+export function drawBaseFill(ctx: CanvasRenderingContext2D, canvasWidth: number, canvasHeight: number) {
+    // Defining base level of coverage
+    ctx.fillStyle = "rgba(238, 243, 249, 0.02)";
+    ctx.beginPath();
+    ctx.fillRect(0, 0, canvasWidth, canvasHeight)
+}
 
 export function drawBlob(ctx: CanvasRenderingContext2D, x: number, y: number) {
-    // Testing Code
-    // const darkness = randRange(80, 230);
-    // const alpha = randRange(0.05, 0.4);
-
-    // const radius = randRange(20, 80);
-    // ctx.fillStyle = `rgba(${darkness}, ${darkness}, ${darkness}, ${alpha})`;
-    // ctx.beginPath();
-    // ctx.arc(x, y, radius, 0, Math.PI * 2);
-    // ctx.fill()
-
+    // Defining Circle Gradient
     const startRadius = randRange(100, 300);
     const endRadius = randRange(startRadius + 100, 500)
     const gradient = ctx.createRadialGradient(x, y, startRadius, x, y, endRadius)
 
+    // Choosing base color and modifying lightness/darkness
     const baseColorIndex = Math.floor(Math.random() * baseColors.length);
     const startDarknessMultiplier = randRange(0.7, 1);
     const endDarknessMultiplier = randRange(startDarknessMultiplier, 1.3);
@@ -53,6 +55,7 @@ export function drawBlob(ctx: CanvasRenderingContext2D, x: number, y: number) {
     const startColor = tintColor(baseColors[baseColorIndex], startDarknessMultiplier);
     const endColor = tintColor(baseColors[baseColorIndex], endDarknessMultiplier);
 
+    // Transparency
     const startAlpha = randRange(0.01, 0.4);
     const endAlpha = 0;
 
