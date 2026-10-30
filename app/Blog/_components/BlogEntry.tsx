@@ -9,10 +9,10 @@ export default function BlogEntry({ slug, title, tags, description, date, coverI
     return (
         <article>
             <Link href={`Blog/${slug}`}>
-                <div className="w-4xl flex gap-5">
+                <div className="w-xs md:w-2xl lg:w-4xl flex flex-col md:flex-row gap-5">
                     {/* Blog Thumbnail */}
                     {/* TODO: Add sizes for optimization */}
-                    <div className="relative min-w-24 max-w-2xs w-full h-36 md:h-50">
+                    <div className="relative min-w-24 h-50 md:max-w-2xs w-full md:h-36 md:h-50">
                         <Image
                             src={coverImage.src}
                             fill={true}
@@ -22,7 +22,7 @@ export default function BlogEntry({ slug, title, tags, description, date, coverI
                     </div>
 
                     {/* Entry Contents */}
-                    <div className="w-full">
+                    <div className="w-full flex flex-col">
                         {/* Title */}
                         <h1 className="font-semibold md:text-lg">
                             {title}
@@ -39,11 +39,11 @@ export default function BlogEntry({ slug, title, tags, description, date, coverI
                         {/* Description */}
                         {/* TODO: Figure out a way to crop description */}
                         <div className="max-h-36 mt-2 w-full">
-                            <p className="max-sm:hidden text-ellipsis">{description}</p>
+                            <p className="max-md:hidden text-ellipsis">{description}</p>
                         </div>
 
                         {/* Details */}
-                        <div className="w-full flex justify-between mt-2 text-sm lg:text-base">
+                        <div className="w-full flex justify-between mt-auto text-sm lg:text-base">
                             <p className="text-slate-700">{new Date(date).toDateString()}</p>
                             {/* TODO: Figure out how to update the x minute read */}
                             <p className="text-slate-700">5 min read</p>
