@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function MainNav() {
     return (
-        <div className="py-3 px-5 flex justify-between bg-white">
+        <div className="py-3 px-5 flex justify-between bg-[#1D3557] text-white">
             {/* Name */}
             <div className="flex items-center">
                 <h1 className="">Frank Huang</h1>

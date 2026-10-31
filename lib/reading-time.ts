@@ -1,3 +1,6 @@
+// Reading Time created by a combination of https://fireflysemantics.medium.com/calculating-reading-time-of-markdown-documents-in-javascript-fcc4e252e70b
+// and Gemini code
+
 import matter from "gray-matter";
 
 export default function getReadTime(markdown: string) {

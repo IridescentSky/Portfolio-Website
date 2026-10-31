@@ -10,30 +10,30 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <div className="flex flex-col gap-5 flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      {/* About */}
-      <section className="p-10">
-        <div className="flex gap-10">
-          <div className="w-md">
-            <h2 className="text-2xl">About</h2>
+    <div className="flex-1 min-h-0 flex flex-row-reverse">
+      <section className="relative w-xl h-full min-h-0 overflow-hidden">
+        <Image fill={true} src="/Alley.jpg" alt="Alleyway with bright signs at night" className="object-cover"/>
+      </section>
+      <section className="flex-1 h-full flex items-center justify-center font-sans">
+        <div className="w-2xl">
+          {/* About */}
+          <section className="p-10">
+            <h2 className="text-8xl">Frank Huang</h2>
             <div>
               Hi, I'm Frank, a 2nd year Computer Science Student at the University of Toronto.
             </div>
-          </div>
-          <div className="relative w-lg aspect-video rounded-lg overflow-hidden">
-            <Image fill={true} src="/squirrel.jpg" alt="Squirrel in Snow" className="object-cover"/>
-          </div>
-        </div>
-      </section>
+          </section>
 
-      {/* Contact */}
-      <section>
-        <h2 className="text-2xl">Contact</h2>
-        <p>Find me on</p>
-        <div className="flex gap-3">
-          <a href="https://github.com/IridescentSky"><FaGithub className="w-10 h-10"/></a>
-          {/* TODO: Add Linkedin */}
-          <a href=""><FaLinkedin className="w-10 h-10"/></a>
+          {/* Contact */}
+          <section>
+            <h2 className="text-2xl">Contact</h2>
+            <p>Find me on</p>
+            <div className="flex gap-3">
+              <a href="https://github.com/IridescentSky"><FaGithub className="w-10 h-10"/></a>
+              {/* TODO: Add Linkedin */}
+              <a href=""><FaLinkedin className="w-10 h-10"/></a>
+            </div>
+          </section>
         </div>
       </section>
     </div>
