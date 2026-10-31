@@ -9,6 +9,7 @@ export default interface PostEntry {
     tags: string[];
     description: string;
     date: string;
+    readTime: number;
     coverImage: {
         src: string;
         alt: string;

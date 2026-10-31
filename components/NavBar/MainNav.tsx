@@ -13,7 +13,6 @@ export default function MainNav() {
             {/* Nav Links */}
             <div className="">
                 <Button variant="ghost"><Link href="/">Home</Link></Button>
-                <Button variant="ghost"><Link href="/">About</Link></Button>
                 <Button variant="ghost"><Link href="/Projects">Projects</Link></Button>
                 <Button variant="ghost"><Link href="/Blog">Blog</Link></Button>
             </div>

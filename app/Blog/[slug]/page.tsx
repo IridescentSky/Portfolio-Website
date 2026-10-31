@@ -4,7 +4,7 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getAllPosts, getPostBySlug } from "@/lib/blog-api";
-import markdownToHtml from "@/lib/md-processor";
+import markdownToHTML from "@/lib/md-processor";
 import Image from "next/image";
 import "./page.css";
 
@@ -46,7 +46,7 @@ export default async function Post(props: Params) {
         notFound();
     }
     
-    const content = await markdownToHtml(post.content);
+    const content = await markdownToHTML(post.content);
 
     return (
         // TODO: Figure out a width that you like

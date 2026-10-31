@@ -4,7 +4,7 @@ import Link from "next/link"
 
 import PostEntry from "@/interfaces/PostEntry"
 
-export default function BlogEntry({ slug, title, tags, description, date, coverImage, coverImageCredit = undefined }: PostEntry) {
+export default function BlogEntry({ slug, title, tags, description, date, readTime, coverImage, coverImageCredit = undefined }: PostEntry) {
     // TODO: Implement cover image credit
     return (
         <article>
@@ -46,7 +46,7 @@ export default function BlogEntry({ slug, title, tags, description, date, coverI
                         <div className="w-full flex justify-between mt-auto text-sm lg:text-base">
                             <p className="text-slate-700">{new Date(date).toDateString()}</p>
                             {/* TODO: Figure out how to update the x minute read */}
-                            <p className="text-slate-700">5 min read</p>
+                            <p className="text-slate-700">{readTime} min read</p>
                         </div>
                     </div>
                 </div>

@@ -34,7 +34,6 @@ export default function MobileNav() {
                         </SheetHeader>
                         <div className="flex flex-col gap-2">
                             <Button variant="ghost">Home</Button>
-                            <Button variant="ghost">About</Button>
                             <Button variant="ghost">Projects</Button>
                             <Button variant="ghost">Blog</Button>
                         </div>

@@ -9,6 +9,8 @@ import matter from 'gray-matter';
 import { get } from 'http';
 import { join } from 'path';
 
+import getReadTime from './reading-time';
+
 // TODO: Check for why @/ doesn't work
 // const postsDirectory = '@/content/posts';
 const postsDirectory = './content/posts';
@@ -22,7 +24,9 @@ export async function getPostByFileName(fileName: string): Promise<Post> {
     const fileContent = await fs.readFile(filePath, "utf-8");
     const { data, content } = matter(fileContent);
 
-    return { ...data, content } as Post;
+    const readTime = getReadTime(content);
+
+    return { ...data, readTime, content } as Post;
 }
 
 export async function getAllPosts(): Promise<Post[]> {

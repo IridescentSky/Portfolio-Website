@@ -9,6 +9,7 @@ export interface Post {
     tags: string[];
     description: string;
     date: string;
+    readTime: number;
     coverImage: {
         src: string;
         alt: string;

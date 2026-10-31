@@ -11,7 +11,9 @@ import rehypeHighlight from "rehype-highlight";
 import rehypeSanitize, { defaultSchema } from "rehype-sanitize"
 import rehypeStringify from "rehype-stringify";
 
-export default async function markdownToHtml(markdown: string) {
+import matter from "gray-matter";
+
+export default async function markdownToHTML(markdown: string) {
   const result = await remark()
     .use(remarkGfm)
     .use(remarkRehype)
@@ -30,5 +32,5 @@ export default async function markdownToHtml(markdown: string) {
     .use(rehypeHighlight)
     .use(rehypeStringify)
     .process(markdown);
-  return result.toString();
+  return result.toString()
 }
