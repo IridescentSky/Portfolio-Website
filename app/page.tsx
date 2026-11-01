@@ -39,14 +39,14 @@ export default function Home() {
                 <button className="bg-[#1B3B5A] text-white px-3 py-1"><a href="/">Resume</a></button>
                 <button className="bg-[#1B3B5A] text-white px-2 py-1"><a href="https://github.com/IridescentSky"><FaGithub className="w-8 h-8"/></a></button>
                 {/* TODO: Add Linkedin */}
-                <button className="bg-[#1B3B5A] text-white px-2 py-1"><a href=""><FaLinkedin className="w-8 h-8"/></a></button>
+                <button className="bg-[#1B3B5A] text-white px-2 py-1"><a href="https://www.linkedin.com/in/frankhuang132/"><FaLinkedin className="w-8 h-8"/></a></button>
               </div>
             </section>
 
             {/* Links */}
             <section className="mt-5 flex flex-col underline text-2xl gap-2">
               <Link href="/Projects">Projects</Link>
-              <Link href="/Projects">Blog</Link>
+              <Link href="/Blog">Blog</Link>
             </section>
 
             {/* Image for mobile */}
