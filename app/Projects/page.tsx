@@ -10,6 +10,9 @@ export default function ProjectHome() {
   const projects = ProjectJSON.projects;
   return (
     <div className="px-5 py-5">
+      <div className="flex justify-center mb-8">
+        <h1 className="text-4xl font-semibold text-gray-500">Project Gallery</h1>
+      </div>
       <div className="flex flex-wrap justify-center gap-5">
           {projects.map((project) => (
             <ProjectEntry
