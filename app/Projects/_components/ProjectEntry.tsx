@@ -18,8 +18,7 @@ import Image from "next/image";
 
 export default function ProjectEntry({ title, description, tags, coverImage, modalData }: ProjectInterface) {
     return (
-        <div>
-            <div className="lg:w-4xl flex flex-col md:flex-row gap-5">
+            <div className="w-sm lg:w-4xl flex flex-col max-md:items-center md:flex-row gap-5">
                 {/* Project Thumbnail */}
                 {/* TODO: Add sizes for optimization */}
                 <div className="relative min-w-24 max-w-2xs w-full h-36 md:h-50">
@@ -56,6 +55,5 @@ export default function ProjectEntry({ title, description, tags, coverImage, mod
                     </div>
                 </div>
             </div>
-        </div>
     )
 }

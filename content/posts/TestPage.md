@@ -1,9 +1,9 @@
 ---
-title: 'Test Page'
-slug: test-page
-description: Test Image of Prairie Dog from Joe Ravi, CC-BY-SA 3.0
-date: 2026/07/12
-tags: ['Project', 'CTF Writeup']
+title: 'Hello World'
+slug: hello-world
+description: Blog Post for testing purposes. Image of Prairie Dog from Joe Ravi, CC-BY-SA 3.0
+date: 2026/11/1
+tags: ['Testing']
 coverImage:
     src: "/Black-Tailed_Prairie_Dog.jpg"
     alt: "Image of Prairie Dog"
@@ -14,14 +14,12 @@ coverImageCredit:
     license: CC-BY-SA 3.0
 ---
 
-## Test Image of Prairie Dog from Joe Ravi, CC-BY-SA 3.0
+## Hello World!
 
-```py
-for i in range(10):
-    print("Hello World")
-```
+Hi! As I'm speaking, it's about 2AM in the morning, and I'm writing this out as a testing page so that I can host my website without the blog page being empty :)
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+I wanted to make this blog page so that I could have a more personal place to post about my thoughts, project details, and initially CTF writeups (I am very much a beginner, and I haven't done them in a while). Hopefully I'll stay relatively consistent with updating my blog and website, so see you later!
+
+**As a bonus thank you for reading through this, here's a cute picutre of a prairie dog by Joe Ravi, CC-BY-SA 3.0!**
 
 ![Image of Prairie Dog](/Black-Tailed_Prairie_Dog.jpg)
-Test Image of Prairie Dog from Joe Ravi, CC-BY-SA 3.0

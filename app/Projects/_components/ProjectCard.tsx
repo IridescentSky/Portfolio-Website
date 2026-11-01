@@ -16,7 +16,7 @@ import Link from "next/link";
 import { FaGithub } from "react-icons/fa";
 import Image from "next/image";
 
-export default function ProjectCard({ title, description, tags, coverImage, links }: ProjectInterface) {
+export default function ProjectCard({ title, description, tags, coverImage, modalData }: ProjectInterface) {
     return (
         <div className="w-md lg:w-md">
             <Card className="pt-0">
@@ -40,14 +40,6 @@ export default function ProjectCard({ title, description, tags, coverImage, link
                             <Badge key={tag}>{tag}</Badge>
                         ))}
                     </div>
-
-                    {links && <div className="flex gap-3">
-                        {links.github && <a href={links.github}>
-                            <FaGithub className="w-5 h-5"/>
-                        </a>}
-                        {links.demo && <a href={links.demo}>Demo</a>}
-                        {links.blog && <Link href={links.blog}>Blog</Link>}    
-                    </div>}
                 </CardFooter>
             </Card>
         </div>

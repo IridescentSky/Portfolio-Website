@@ -24,7 +24,7 @@ export function ProjectModal({title, modalData} : ProjectModalProps) {
   return (
     <Dialog>
       <form>
-        <DialogTrigger render={<Button variant="outline">Open Dialog</Button>} />
+        <DialogTrigger render={<Button variant="outline">Show More...</Button>} />
         <DialogContent className="max-w-md sm:max-w-lg md:max-w-2xl">
           <DialogHeader>
             <DialogTitle>{title}</DialogTitle>
