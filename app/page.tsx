@@ -36,7 +36,7 @@ export default function Home() {
             {/* Contact */}
             <section className="mt-5">
               <div className="flex gap-3">
-                <button className="bg-[#1B3B5A] text-white px-3 py-1"><a href="/">Resume</a></button>
+                <button className="bg-[#1B3B5A] text-white px-3 py-1"><a href="/resume_portfolio.pdf">Resume</a></button>
                 <button className="bg-[#1B3B5A] text-white px-2 py-1"><a href="https://github.com/IridescentSky"><FaGithub className="w-8 h-8"/></a></button>
                 {/* TODO: Add Linkedin */}
                 <button className="bg-[#1B3B5A] text-white px-2 py-1"><a href="https://www.linkedin.com/in/frankhuang132/"><FaLinkedin className="w-8 h-8"/></a></button>
