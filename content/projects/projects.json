@@ -1,8 +1,27 @@
 {
     "projects": [
         {
-            "title": "VPCI FIRST Tech Challenge Robotics",
-            "description": "Co-led programming for high school FTC Robotics Team",
+            "title": "Web Portfolio",
+            "description": "Personal Portfolio with a Project Gallery and Blog! This was made using NextJS and Shadcn UI. I also wanted to have a blog page where I can be more detailed about personal projects, writeups, or personal thoughts. Hopefully I'll be somewhat consistent in updating my blog. :D",
+            "tags": ["Web Dev", "React"],
+            "coverImage": {
+                "src": "/images/projects/portfolio/portfolio_screenshot.jpg",
+                "alt": "Screenshot of Portfolio Site"
+            },
+            "modalData": {
+                "description": "Personal Portfolio with a Project Gallery and Blog! This was made using NextJS and Shadcn UI. I also wanted to have a blog page where I can be more detailed about personal projects, writeups, or personal thoughts. Hopefully I'll be somewhat consistent in updating my blog. :D",
+                "features": [
+                    "Project Gallery",
+                    "Markdown Blog"
+                ],
+                "links": {
+                    "github": "https://github.com/IridescentSky/Portfolio-Website"
+                }
+            }
+        },
+        {
+            "title": "VPCI FIRST Tech Challenge Robotics (Oct 2023 - June 2025)",
+            "description": "Co-led programming for high school FTC Robotics Team, programming tele-op and autonomous opmodes. Demo video of autonomous program can be found in Show More.",
             "tags": ["Robotics", "Java"],
             "coverImage": {
                 "src": "/images/projects/vpci-robotics/thumbnail.jpg",
@@ -18,6 +37,26 @@
                 "links": {
                     "github": "https://github.com/vicparkrobotics/Panthertronics-24485-2023",
                     "demo" : "https://www.youtube.com/watch?v=NvYGFE-sSSA"
+                }
+            }
+        },
+        {
+            "title": "Smash - ICS3U7 Project",
+            "description": "Co-developed a simple fighting game inspired by Super Smash for our ICS3U7 Culminating Project. Includes a ranged and melee attack and player vs computer mode.",
+            "tags": ["Swing/AWT GUI", "Java"],
+            "coverImage": {
+                "src": "/images/projects/smash/smash_demo.gif",
+                "alt": "Gameplay of Smash"
+            },
+            "modalData": {
+                "description": "In ICS3U7, I co-developed a simple fighting game inspired by Super Smash for our ICS3U7 Culminating Project. Our fighter has a melee attack and a ranged attack, and there is a player-vs-computer mode, and a training mode where you can attack a dummy.",
+                "features": [
+                    "Modular code using OOP to use classes for the fighter, animations, etc...",
+                    "Player vs Computer mode",
+                    "Training mode where you can practice on a training dummy"
+                ],
+                "links": {
+                    "github": "https://github.com/IridescentSky/SMASH-ICS3U7-Project"
                 }
             }
         }
