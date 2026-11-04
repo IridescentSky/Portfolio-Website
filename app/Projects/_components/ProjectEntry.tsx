@@ -27,6 +27,7 @@ export default function ProjectEntry({ title, description, tags, coverImage, mod
                         fill={true}
                         alt={coverImage.alt}
                         className="object-cover"
+                        sizes="(max-width: 288px) 100vw, 288px"
                     />
                 </div>
 
