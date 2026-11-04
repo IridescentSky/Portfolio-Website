@@ -64,7 +64,13 @@ export default async function Post(props: Params) {
 
                 {/* Cover Image */}
                 <div className="relative aspect-video rounded-lg overflow-hidden">
-                    <Image src={post.coverImage.src} alt={post.coverImage.alt} fill priority className="object-cover" />
+                    <Image 
+                        src={post.coverImage.src} 
+                        alt={post.coverImage.alt} 
+                        fill priority 
+                        className="object-cover" 
+                        sizes="(max-width: 767px) 100vw, 768px"
+                    />
                     {post.coverImageCredit && (<div className="absolute bottom-0 right-0 bg-black/50 text-white text-sm px-2 py-1">
                     Photo by {" "}
                         <a

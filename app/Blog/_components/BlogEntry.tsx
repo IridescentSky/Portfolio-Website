@@ -17,6 +17,7 @@ export default function BlogEntry({ slug, title, tags, description, date, readTi
                             src={coverImage.src}
                             fill={true}
                             alt={coverImage.alt}
+                            sizes="(max-width: 767px) 100vw, (max-width: 1023px) 288px, 320px"
                             className="object-cover"
                         />
                     </div>

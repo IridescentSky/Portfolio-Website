@@ -13,7 +13,12 @@ export default function Home() {
   return (
     <div className="flex-1 min-h-0 flex flex-row-reverse">
       <section className="relative max-md:hidden md:w-xs lg:w-lg xl:w-3xl h-full min-h-0 overflow-hidden">
-        <Image fill={true} src="/Alley.jpg" alt="Alleyway with bright signs at night" className="object-cover"/>
+        <Image fill={true} 
+          src="/Alley.jpg" 
+          alt="Alleyway with bright signs at night" 
+          className="object-cover"
+          sizes="(max-width: 767px) 100vw, (max-width: 1023px) 20rem, (max-width: 1279px) 32rem, 48rem"
+        />
       </section>
 
       <section className="flex-1 h-full flex flex-col font-sans">
@@ -52,7 +57,13 @@ export default function Home() {
             {/* Image for mobile */}
             <section className="md:hidden pt-6 pb-5 flex justify-center">
               <div className="relative w-xs h-100 min-h-0 overflow-hidden">
-                <Image fill={true} src="/Alley.jpg" alt="Alleyway with bright signs at night" className="object-cover"/>
+                <Image 
+                  fill={true} 
+                  src="/Alley.jpg" 
+                  alt="Alleyway with bright signs at night" 
+                  className="object-cover"
+                  sizes="(max-width: 319px) 100vw, 320px"
+                />
               </div>
             </section>
           </section>
