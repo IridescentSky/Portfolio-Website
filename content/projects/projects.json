@@ -20,8 +20,30 @@
             }
         },
         {
+            "title": "Clustock Stock Correlation Visualizer - CSC111 Project",
+            "description": "Graph Visualizer for correlation between stocks, representing stocks and nodes and correlation coefficients as weighted edges. We wanted to see how well GICS Sectors capture the correlations between changes in stock prices.",
+            "tags": ["Dash Plotly", "Python"],
+            "coverImage": {
+                "src": "/images/projects/clustock/dash-screenshot.png",
+                "alt": "Screenshot of Stock Graph Visualizer"
+            },
+            "modalData": {
+                "description": "Graph Visualizer for correlation between stocks, representing stocks and nodes and correlation coefficients as weighted edges. I worked on implementing Breadth-First Search to find stocks that connect different sectors, different graph views to clearer visualization, and panels to show stats for each sector.",
+                "features": [
+                    "Change correlation coefficient threshold to see how the graph changes",
+                    "3 Graph Views: grouping by connections, GICS Sectors, and Community Detection",
+                    "Searching for Stocks that connect different GICS Sectors",
+                    "Panels to show rankings for sector sub-graph statistics"
+                ],
+                "links": {
+                    "github" : "https://github.com/brandonli5211/clustock",
+                    "demo" : "https://013a4877-779a-4f97-8e60-da5b96328c30.plotly.app/"
+                }
+            }
+        },
+        {
             "title": "VPCI FIRST Tech Challenge Robotics (Oct 2023 - June 2025)",
-            "description": "Co-led programming for high school FTC Robotics Team, programming tele-op and autonomous opmodes. Demo video of autonomous program can be found in Show More.",
+            "description": "Co-led programming for high school FTC Robotics Team, programming tele-op and autonomous opmodes. Demo video of autonomous program can be found in \"Show More\".",
             "tags": ["Robotics", "Java"],
             "coverImage": {
                 "src": "/images/projects/vpci-robotics/thumbnail.jpg",
