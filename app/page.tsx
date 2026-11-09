@@ -33,7 +33,7 @@ export default function Home() {
           <section className="lg:text-md xl:text-lg">
             <h2 className="font-semibold mb-2">About Me</h2>
             <div>
-              <p>Hi! I’m a 2nd year student at the University of Toronto pursuing a Computer Science Specialist. I especially enjoy learning about robotics (I am joining UofT FSAE as a Driverless Perception sub-team member this year) and DSA algorithms.</p>
+              <p>Hi! I’m a 2nd year student at the University of Toronto pursuing a Computer Science Specialist. I especially enjoy learning about robotics and DSA algorithms.</p>
               <br/>
               <p>Outside of school, I like photography, keeping up with transit news, and exploring parks and subway stations around Toronto.</p>
             </div>
